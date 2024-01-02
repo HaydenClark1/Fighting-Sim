@@ -21,8 +21,8 @@ function App (){
        {status === 'start' && <StartScreen startGame={() => setStatus('select')}/>}
        {status === 'select' && <CharacterSelector setSelectedCharacter={setCharacter} playerName={(name)=> setPlayerName(name)}/>}
        {status === 'fight' && <Arena character={character} status={setGameStatus} playerName={playerName}/>}
-       {status === 'win' && <PlayerWin/>}
-       {status === 'lose' && <PlayerLose/>}
+       {status === 'win' && <PlayerWin startGame={()=> setStatus('select')}/>}
+       {status === 'lose' && <PlayerLose startGame={() => setStatus('select')}/>}
         </>
     )
 }

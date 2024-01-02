@@ -51,7 +51,7 @@ const useAttack = (attackType) =>{
     }
 }
     useEffect(()=>{
-        if(canAttack && health !== 100){
+        if(canAttack && health < healthBar){
         setShake(true);
         setTimeout(()=> setShake(false),500)
         }
@@ -72,11 +72,11 @@ const useAttack = (attackType) =>{
             <div className="attack-buttons">
                 <div className="attack-buttons-top">
                 <button className="punch-button" disabled= {!canAttack || attacks[0] === 0} onClick={()=>useAttack('punch')}>Punch {attacks[0]}/10</button>
-                <button className="kick-button" disabled= {!canAttack} onClick={()=>useAttack('kick')}>Kick {attacks[1]}/10</button>
+                <button className="kick-button" disabled= {!canAttack || attacks[1] === 0} onClick={()=>useAttack('kick')}>Kick {attacks[1]}/10</button>
                 </div>
                 <div className="attack-buttons-bottom">
-                <button className="shoot-button" disabled= {!canAttack} onClick={()=>useAttack('illusion')}>illusion {attacks[2]}/5</button>
-                <button className="heal-button"  disabled= {!canAttack || health > 90} onClick={()=>useAttack('heal')}>Heal {attacks[3]}/5</button>
+                <button className="shoot-button" disabled= {!canAttack || attacks[2] === 0} onClick={()=>useAttack('illusion')}>Illusion {attacks[2]}/5</button>
+                <button className="heal-button"  disabled= {!canAttack || health > 90 || attacks[3] === 0} onClick={()=>useAttack('heal')}>Heal {attacks[3]}/5</button>
                 </div>
             </div>
            

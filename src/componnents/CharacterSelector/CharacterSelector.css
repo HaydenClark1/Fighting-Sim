@@ -1,0 +1,149 @@
+body{
+    background-color: rgb(70, 69, 69);
+    z-index: 1;
+}
+.character-container{
+    position: relative;
+    width: 90vw;
+    height: 100vh;
+}
+.select-character{
+    position: absolute;
+    top: 0%;
+    right: 40%;
+    transform: translateX(40%);
+    font-size: 70px;
+}
+.character-option-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    width: 90vw;
+    height: 100vh;
+    margin-left: 6%;
+
+}
+.character1-container,
+.character2-container,
+.character3-container,
+.character4-container,
+.character5-container,
+.character6-container
+{
+    justify-content: space-around;
+    flex: 0 0 calc(20% - 10px); 
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 35%;
+    width: 20%;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 50px;
+    border-color: black;
+}
+.character1-container,
+.character2-container,
+.character3-container{
+    margin-top: 10%;
+    margin-bottom:0;
+}
+.character4-container,
+.character5-container,
+.character6-container{
+    margin-top: 0;
+}
+.character-name1{
+    visibility: hidden;
+    position: absolute;
+    font-size: 300%;
+    font-weight: 800;
+    color: white;
+    left: 14.5%;
+    top: 25%;
+    text-shadow: -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black, 2px 2px 4px black;
+
+}
+.character-name2{
+    visibility: hidden;
+    position: absolute;
+    font-size: 300%;
+    font-weight: 900;
+    color:white;
+    left: 46%;
+    top: 25%;
+    text-shadow: -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black, 2px 2px 4px black;
+}
+.character-name3{
+    visibility: hidden;
+    position: absolute;
+    font-size: 300%;
+    font-weight: 800;
+    color: white;
+    left: 76%;
+    top: 25%;
+    text-shadow: -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black, 2px 2px 4px black;
+}
+.character-name4{
+    position: absolute;
+    visibility: hidden;
+    font-size: 300%;
+    font-weight: 800;
+    color: white;
+    left: 17.75%;
+    bottom: 10%;
+    text-shadow: -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black, 2px 2px 4px black;
+}
+.character-name5{
+    position: absolute;
+    visibility: hidden;
+    font-size: 300%;
+    font-weight: 800;
+    color: white;
+    left: 45%;
+    bottom: 10%;
+    text-shadow: -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black, 2px 2px 4px black;
+}
+.character-name6{
+    position: absolute;
+    visibility: hidden;
+    font-size: 300%;
+    font-weight: 800;
+    color: white;
+    right: 14%;
+    bottom: 10%;
+    text-shadow: -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black, 2px 2px 4px black;
+}
+.character1-container:hover,
+.character2-container:hover,
+.character3-container:hover,
+.character4-container:hover,
+.character5-container:hover,
+.character6-container:hover{
+    .character-name1,
+    .character-name2,
+    .character-name3,
+    .character-name4,
+    .character-name5,
+    .character-name6{
+        visibility: visible;
+        transition: visible 1s ease;
+    }
+    background-color: gray;
+    transition: background-color 0.3s ease
+}
+.character1,
+.character2,
+.character3,
+.character4,
+.character5,
+.character6{
+    position: absolute;
+    margin-left: 5%;
+    margin-top: .5%;
+    height: 35%;
+    width: 10%;
+}

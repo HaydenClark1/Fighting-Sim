@@ -1,0 +1,145 @@
+.player-model-container{
+    position: absolute;
+    width: 20vw;
+    height: 60%;
+    bottom: 20%;
+    left: 20%;
+    z-index: 4;
+}
+.player-model{
+    position: absolute;
+    height: 80%;
+    bottom: 8%;
+    z-index: 4;
+    left: 55%;
+}
+.attack-container{
+    position: absolute;
+    bottom: 0;
+    height: 17vh;
+    width: 60vw;
+    left: 20vw;
+    background-image: url("./images/background-cropped.png");
+    background-size: cover;
+    z-index: 1;
+    border-style: solid;
+    border-width: 7px;
+    border-color: black;
+}
+
+.attack-buttons{
+    position: absolute;
+    bottom: 0;
+    right: 1.5%;
+    width: 50%;
+    height: 98%;
+    z-index: 6;
+}
+.attack-buttons-top,
+.attack-buttons-bottom{
+    height: 50%;
+}
+
+.punch-button,
+.kick-button,
+.heal-button,
+.shoot-button{
+    width: 50%;
+    height: 100%;
+    border-radius:10%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    z-index: 7;
+}
+.punch-button:hover,
+.kick-button:hover,
+.heal-button:hover,
+.shoot-button:hover{
+    border-color: black;
+}
+.punch-button{
+    background-color: rgb(225, 141, 141);
+
+}
+.kick-button{
+    background-color: rgb(207, 136, 5);
+}
+.heal-button{
+    background-color: rgb(72, 72, 248);
+}
+.shoot-button{
+    background-color: rgb(3, 88, 3);
+}
+
+.border1,
+.border2{
+    position: absolute;
+    height: 100vh;
+    width: 20vw;
+    background-color: black;
+    top: 0;
+}
+.border2{
+    right: 0;
+}
+
+.player-health-container{
+    position: absolute;
+    bottom: 19%;
+    right: 20%;
+    height: 20%;
+    width: 22%;
+    z-index: 3;
+}
+.player-health-bar{
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    bottom: 28%;
+    right: 8%;
+    z-index: 5;
+}
+.player-name{
+    position: absolute;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    left: 5%;
+    top: 5%;
+    margin: 0;
+    font-size: 40px;
+}
+.player-level{
+    position: absolute;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin: 0;
+    font-size: 30px;
+    right: 10%;
+    top: 7%;
+    font-weight: bold;
+}
+.player-health{
+    position: absolute;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 3vh;
+    bottom: -10%;
+    left: 32%;
+    z-index: 5;
+}
+.shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25%, 75% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  }
